@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2020 at 01:58 PM
+-- Generation Time: May 05, 2020 at 01:04 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -43,7 +43,9 @@ CREATE TABLE `barang` (
 
 INSERT INTO `barang` (`kd_brg`, `nm_barang`, `merk`, `tipe`, `harga`, `stok`) VALUES
 (1, 'smartphone', 'apple', 'iphone 7', '4500000', '5'),
-(2, 'smartphone', 'apple', 'iphone x', '10000000', '1');
+(2, 'smartphone', 'apple', 'iphone x', '10000000', '1'),
+(8, 'laptop', 'asus', 'rog zephyrus g14', '20000000', '2'),
+(9, 'laptop', 'hp', 'pavilion gaming 15', '15000000', '3');
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,8 @@ CREATE TABLE `pembeli` (
 
 INSERT INTO `pembeli` (`kd_pembeli`, `nm_pembeli`, `jenis_kelamin`, `alamat`, `kota`) VALUES
 (1, 'fadhlan', 'L', 'joyo utomo V', 'malang'),
-(3, 'ujang', 'L', 'sirnagalih', 'Depok');
+(3, 'ujang', 'L', 'sirnagalih', 'Depok'),
+(4, 'muhammad', 'L', 'smpm 29 sawangan', 'Depok');
 
 -- --------------------------------------------------------
 
@@ -87,7 +90,10 @@ CREATE TABLE `transaksi` (
 INSERT INTO `transaksi` (`kd_trx`, `kd_brg`, `kd_pembeli`, `tgl_beli`) VALUES
 (1, 1, 1, '2020-05-04 13:28:04'),
 (2, 3, 2, '2020-05-04 13:54:44'),
-(3, 2, 3, '2020-05-04 13:55:29');
+(3, 2, 3, '2020-05-04 13:55:29'),
+(4, 2, 1, '2020-05-04 14:08:48'),
+(5, 8, 1, '2020-05-05 12:10:49'),
+(6, 9, 4, '2020-05-05 12:11:38');
 
 -- --------------------------------------------------------
 
@@ -106,7 +112,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'fadh', '$2y$10$e9K3W.P92Bp79GvUsaSlduk6oCteg/gNx.gN7CNz074qBmx4hB4RW');
+(1, 'fadh', '$2y$10$e9K3W.P92Bp79GvUsaSlduk6oCteg/gNx.gN7CNz074qBmx4hB4RW'),
+(2, 'admin', '$2y$10$yySwN7xygiFp7AUSUgr/U.PwI9ISLBC0kk5VQQoD/LjeLkDiRg32q'),
+(3, 'test', '$2y$10$KNlpEKTTz91QGWpkg4ryXOWVQ0rLOGFixLReCaYpzmdg0/20qSiJW');
 
 --
 -- Indexes for dumped tables
@@ -144,25 +152,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `kd_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `kd_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `pembeli`
 --
 ALTER TABLE `pembeli`
-  MODIFY `kd_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kd_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `kd_trx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kd_trx` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
