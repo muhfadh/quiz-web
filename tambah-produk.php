@@ -34,36 +34,43 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Produk</title>
+    <link rel="stylesheet" type="text/css" href="css/tambah.css">
 </head>
 <body>
-    <h1>Tambah Data Produk</h1>
-
     <form action="" method="POST" enctype="multipart/form-data">
-        <ul>
-            <li>
-                <label for="nm_barang">Nama Barang : </label>
-                <input type="text" name="nm_barang" id="nm_barang" required>
-            </li>
-            <li>
-                <label for="merk">Merk Barang : </label>
-                <input type="text" name="merk" id="merk" required>
-            </li>
-            <li>
-                <label for="tipe">Tipe Barang : </label>
-                <input type="text" name="tipe" id="tipe" required>
-            </li>
-            <li>
-                <label for="harga">harga Barang : </label>
-                <input type="text" name="harga" id="harga" required>
-            </li>
-            <li>
-                <label for="stok">stok Barang : </label>
-                <input type="text" name="stok" id="stok" required>
-            </li>
-            <li>
-                <button type="submit" name="submit">Tambah Data Produk</button>
-            </li>
-        </ul>
+    <div class="tambah">
+        <div class="tambah-screen">
+            <div class="app-title">
+                <h1>Tambah Data Produk</h1>
+            </div>
+
+            <div class="tambah-form">
+                <div class="control-group">
+                        <input type="text" name="nm_barang" id="nm_barang" placeholder="Nama Barang" required>
+                        <label for="nm_barang"></label>
+                </div>
+                <div class="control-group">
+                        <label for="merk"></label>
+                        <input type="text" name="merk" id="merk" placeholder="Merk Barang"  required>
+                </div>
+                <div class="control-group">
+                        <label for="tipe"></label>
+                        <input type="text" name="tipe" id="tipe" placeholder="Tipe Barang"  required>
+                </div>    
+                <div class="control-group">
+                        <label for="harga"></label>
+                        <input type="text" name="harga" id="harga" placeholder="Harga Barang" required>
+                </div>   
+                <div class="control-group">
+                        <label for="stok"></label>
+                        <input type="text" name="stok" id="stok" placeholder="Stok Barang"  required>
+                </div>
+                    
+                <button type="submit" name="submit" class="button">Tambah Data Produk</button>
+                    
+            </div>
+        </div>
+    </div>
     </form>
 </body>
 </html>

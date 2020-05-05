@@ -35,13 +35,10 @@ $transaksi = query("SELECT t.kd_trx, t.tgl_beli, concat(concat(p.nm_pembeli, ' -
         +
     </a>
     <a href="logout.php" class="logout">
-        <!-- <i class="fa fa-home"></i> -->
         <i class="fa fa-close"></i>
     </a>
     <br><br>
     <br>
-<!-- 
-    border="1" cellpadding="10" cellspacing="0" -->
     <table class="tabelkuh">
         <thead>
             <tr>

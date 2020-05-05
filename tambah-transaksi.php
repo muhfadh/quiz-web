@@ -34,24 +34,31 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Transaksi</title>
+    <link rel="stylesheet" type="text/css" href="css/tambah.css">
 </head>
 <body>
-    <h1>Tambah Data Transaksi</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+    <div class="tambah">
+        <div class="tambah-screen">
+            <div class="app-title">
+                <h1>Tambah Data Transaksi</h1>
+            </div>
 
-    <form action="" method="POST" enctype="multipart/form-data">
-        <ul>
-            <li>
-                <label for="kd_brg">Kode Barang : </label>
-                <input type="text" name="kd_brg" id="kd_brg" required>
-            </li>
-            <li>
-                <label for="kd_pembeli">Kode Pembeli : </label>
-                <input type="text" name="kd_pembeli" id="kd_pembeli" required>
-            </li>
-            <li>
-                <button type="submit" name="submit">Tambah Data Transaksi</button>
-            </li>
-        </ul>
+            <div class="tambah-form">
+                <div class="control-group">
+                    <label for="kd_brg"></label>
+                    <input type="text" name="kd_brg" id="kd_brg" placeholder="Kode Barang" required>
+                </div>
+                <div class="control-group">
+                    <label for="kd_pembeli"></label>
+                    <input type="text" name="kd_pembeli" id="kd_pembeli" placeholder="Kode Pembeli" required>
+                </div>
+
+                <button type="submit" name="submit" class="button">Tambah Data Transaksi</button>
+                    
+            </div>
+        </div>
+    </div>
     </form>
 </body>
 </html>
