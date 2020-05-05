@@ -161,11 +161,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.link) {
-    background-color: #ddd;
-}
-
 li a.link {
     color: white;
     background-color: #009879;
+}
+
+li a:hover {
+    background-color: rgb(11, 160, 68);
 }

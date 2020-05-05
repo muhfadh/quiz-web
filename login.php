@@ -1,25 +1,10 @@
 <?php
     session_start();
-    require 'functions.php';
-    if(isset($_COOKIE['id']) && isset($_COOKIE['key'])){
-        $id = $_COOKIE['id'];
-        $key = $_COOKIE['key'];
-
-        //ambil username berdasar id
-        $result = mysqli_query($conn, "SELECT username FROM user WHERE id = $id");
-        $row = mysqli_fetch_assoc($result);
-
-        //cek cookie dan username
-        if($key === hash('sha256', $row['username'])){
-            $_SESSION['login'] == true;
-        }
-    }
-
     if( isset($_SESSION["login"])){
         header("Location: index.php");
         exit;
     }
-    
+    require 'functions.php';
 
     if(isset($_POST["login"])){
         $username = $_POST["username"];
@@ -37,13 +22,6 @@
                 //set session
                 $_SESSION["login"] = true;
                 
-                //cek remember me
-                if(isset($_POST["remember"])){
-                    //buat cookie
-                    setcookie('id', $row['id'], time() + 60);
-                    setcookie('key', hash('sha256', $row['username']), time() + 60);
-                }
-                
                 header("Location: index.php");
                 exit;
             }
@@ -59,33 +37,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    <h1>Halaman Login</h1>
-    <?php if(isset($error)) : ?>
-        <p style="color: red; font-style: italic"> username / password salah </p>
-    <?php endif; ?>
+    
     <form action="" method="POST">
 
-        <ul>
-            <li>
-                <label for="username">Username : </label>
-                <input type="text" name="username" id="username">
-            </li>
-            <li>
-                <label for="password">Password : </label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember Me : </label>
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-           
-        </ul>
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Login</h1>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                    <input type="text" name="username" class="login-field" value="" placeholder="Username">
+                    <label class="login-field-icon fui-user" for="username"></label>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" name="password" class="login-field" value="" placeholder="Password">
+                    <label class="login-field-icon fui-lock" for="password"></label>
+                </div>
+
+                <button type="submit" name="login" class="button">Login</button>
+                <a class="login-link" href="registrasi.php">Belum punya akun?</a>
+                <?php if(isset($error)) : ?>
+                    <p style="color: red;"> username / password salah </p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
     </form>
 </body>
 </html>

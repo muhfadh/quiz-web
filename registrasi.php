@@ -20,34 +20,39 @@ require 'functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Registrasi</title>
-    <style>
-        label {
-            display: block;
-
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
 <body>
-    <h1>Halaman Registrasi</h1>
-    <form action="" method="post" enctype="">
-        <ul>
-            <li>
-                <label for="username">username : </label>
-                <input type="text" name="username" id="username">
-            </li>
-            <li>
-                <label for="password">password : </label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                <label for="password2">konfirmasi password : </label>
-                <input type="password" name="password2" id="password2">
-            </li>
-            <li>
-                <button type="submit" name="register">Daftar</button>
-            </li>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <div class="register">
+            <div class="register-screen">
+                <div class="app-title">
+                <h1>Registrasi</h1>
+        
+            <div class="register-form">
+                <div class="control-group">
+                <label for="username"></label>
+                <input type="text" name="username" id="username" class="register-form" placeholder="Username">
+              </div>
             
-        </ul>
+            <div class="control-group">  
+                <label for="password"></label>
+                <input type="password" name="password" id="password" class="register-form" placeholder="Password">
+                </div>
+            
+            
+            <div class="control-group">
+                <label for="password2"></label>
+                <input type="password" name="password2" id="password2" class="register-form" placeholder="Konfirmasi Password">
+                </div>
+            
+                <button type="submit" name="register" class="button">Daftar</button>
+                <a class="login-link" href="login.php">Sudah punya akun?</a>
+           
+            
+        
     </form>
 </body>
 </html>
