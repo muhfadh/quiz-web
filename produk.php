@@ -44,13 +44,10 @@ if(isset($_POST["cari"])){
         +
     </a>
     <a href="logout.php" class="logout">
-        <!-- <i class="fa fa-home"></i> -->
         <i class="fa fa-close"></i>
     </a>
-    <br><br>
     <br>
-<!-- 
-    border="1" cellpadding="10" cellspacing="0" -->
+    <br>
     <table class="tabelkuh">
         <thead>
             <tr>
@@ -68,8 +65,8 @@ if(isset($_POST["cari"])){
             <tr>
                 <td><?= $row["kd_brg"]; ?></td>
                 <td>
-                    <a href="ubah-produk.php?kd_brg=<?= $row["kd_brg"]; ?>">ubah</a> | 
-                    <a href="hapus-produk.php?kd_brg=<?= $row["kd_brg"]; ?>" onclick="return confirm('yakin?');">hapus</a>
+                    <a href="ubah-produk.php?kd_brg=<?= $row["kd_brg"]; ?>" class="ubah">ubah</a> | 
+                    <a href="hapus-produk.php?kd_brg=<?= $row["kd_brg"]; ?>" class="hapus" onclick="return confirm('yakin?');">hapus</a>
                 </td>
                 <td><?= $row["nm_barang"] ?></td>
                 <td><?= $row["merk"] ?></td>
@@ -81,6 +78,6 @@ if(isset($_POST["cari"])){
         <?php endforeach;?>
     </table>
     <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script-produk.js"></script>
 </body>
 </html>

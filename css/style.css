@@ -1,6 +1,6 @@
 .tabelkuh {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 50px 0;
     margin-left: auto;
     margin-right: auto;
     font-size: 0.9em;
@@ -78,10 +78,10 @@
 }
 
 form {
-    margin-left: 735px;
-    margin-bottom: 50px;
+    margin-left: 300px;
+    margin-top: 20px;
     outline: 0;
-    float: left;
+    position: absolute;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -webkit-border-radius: 4px;
@@ -90,14 +90,12 @@ form {
 
 form>.textbox {
     outline: 0;
-    height: 42px;
-    width: 244px;
+    width: 200px;
     line-height: 42px;
     padding: 0 16px;
     background-color: rgba(255, 255, 255, 0.8);
     color: #212121;
     border: 0;
-    float: left;
     -webkit-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px;
 }
@@ -138,7 +136,6 @@ h1 {
 
 .navbar {
     margin-left: 300px;
-    float: left;
 }
 
 ul {
@@ -168,4 +165,24 @@ li a.link {
 
 li a:hover {
     background-color: rgb(11, 160, 68);
+}
+
+.ubah {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 2px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hapus {
+    background-color: #f44336;
+    color: white;
+    padding: 2px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }

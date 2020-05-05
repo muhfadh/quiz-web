@@ -30,6 +30,7 @@ require 'functions.php';
         </div>
     </div>
     
+    
     <a href="logout.php" class="logout">
         <i class="fa fa-close"></i>
     </a>
