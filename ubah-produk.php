@@ -42,37 +42,47 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Data Produk</title>
+    <link rel="stylesheet" type="text/css" href="css/ubah.css">
 </head>
 <body>
-    <h1>Ubah Data Produk</h1>
-
     <form action="" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="kd_brg" value="<?= $produk["kd_brg"];?>">
-        <ul>
-            <li>
-                <label for="nm_barang">Nama Barang : </label>
-                <input type="text" name="nm_barang" id="nm_barang" required value="<?= $produk["nm_barang"]; ?>">
-            </li>
-            <li>
-                <label for="merk">merk : </label>
-                <input type="text" name="merk" id="merk" required value="<?= $produk["merk"]; ?>">
-            </li>
-            <li>
-                <label for="tipe">tipe : </label>
-                <input type="text" name="tipe" id="tipe" required value="<?= $produk["tipe"]; ?>">
-            </li>
-            <li>
-                <label for="harga">Harga : </label>
-                <input type="text" name="harga" id="harga" required value="<?= $produk["harga"]; ?>">
-            </li>
-            <li>
-                <label for="stok">Stok : </label>
-                <input type="text" name="stok" id="stok" required value="<?= $produk["stok"]; ?>">
-            </li>
-            <li>
-                <button type="submit" name="submit">Ubah Data</button>
-            </li>
-        </ul>
+    <input type="hidden" name="kd_brg" value="<?= $produk["kd_brg"];?>">
+    <div class="ubah">
+        <div class="ubah-screen">
+            <div class="app-title">
+                <h1>Ubah Data Produk</h1>
+            </div>
+
+            <div class="ubah-form">
+                <div class="control-group">
+                    <label for="nm_barang">Nama Barang</label>
+                    <input type="text" name="nm_barang" id="nm_barang" required value="<?= $produk["nm_barang"]; ?>">
+                </div>  
+
+                <div class="control-group">
+                    <label for="merk">merk : </label>
+                    <input type="text" name="merk" id="merk" required value="<?= $produk["merk"]; ?>">
+                </div> 
+
+                <div class="control-group">
+                    <label for="tipe">tipe : </label>
+                    <input type="text" name="tipe" id="tipe" required value="<?= $produk["tipe"]; ?>">
+                </div> 
+
+                <div class="control-group">
+                    <label for="harga">Harga : </label>
+                    <input type="text" name="harga" id="harga" required value="<?= $produk["harga"]; ?>">
+                </div> 
+
+                <div class="control-group">
+                    <label for="stok">Stok : </label>
+                    <input type="text" name="stok" id="stok" required value="<?= $produk["stok"]; ?>">
+                </div> 
+
+                <button type="submit" name="submit" class="button">Ubah Data</button>
+            </div>   
+        </div>
+    </div>
     </form>
 </body>
 </html>
